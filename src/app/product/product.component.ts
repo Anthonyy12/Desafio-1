@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Product, products } from '../products';
 
-
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -10,15 +9,15 @@ import { Product, products } from '../products';
 export class ProductComponent {
   @Input() product!: Product;
   share() {
-    window.alert('The product has been shared!');
+    window.alert('¡El producto ha sido compartido!');
   }
 
   onNotify() {
-    window.alert('You will be notified when the product goes on sale');
+    window.alert('Se le notificará cuando el producto salga a la venta');
   }
 
   display: boolean = false;
-  showDialog() {
+  addToCart(product: Product) {
     this.display = true;
   }
 }
