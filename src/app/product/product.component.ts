@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Product, products } from '../products';
 
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -14,5 +15,10 @@ export class ProductComponent {
 
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
+  }
+
+  display: boolean = false;
+  showDialog() {
+    this.display = true;
   }
 }

@@ -10,3 +10,16 @@
 
 <app-product-alerts [product]="product" (notify)="onNotify()">
 </app-product-alerts>
+
+<p-dialog header="{{ product.name }}" [(visible)]="display">
+  Precio: {{ product.price }}
+</p-dialog>
+
+<button
+  type="button"
+  (click)="showDialog()"
+  icon="pi pi-info-circle"
+  label="Mostrar"
+>
+  Comprar
+</button>
